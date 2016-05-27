@@ -15,7 +15,6 @@ class MarcacaoController extends Controller
 {
     public function actionEnviarMarcacao()
     {
-        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
         if (Yii::$app->request->isPost) {
             $post = Yii::$app->request->post();
             $marcacao = new Marcacao();
@@ -33,5 +32,10 @@ class MarcacaoController extends Controller
         
     }
     
+    public function actionListarMarcacoes()
+    {
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+        return Marcacao::find()->all();
+    }
     
 }
