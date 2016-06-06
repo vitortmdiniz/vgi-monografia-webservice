@@ -1,6 +1,8 @@
 <?php
 
-namespace api\models;
+namespace app\models;
+
+use yii\db\ActiveRecord;
 
 class Categoria extends ActiveRecord {
 
